@@ -1,0 +1,45 @@
+html {
+  height 100%
+}
+body {
+  margin 0
+  height 100%
+}
+.demo {
+  height 100%
+}
+.demo-chart {
+  position relative
+  width 100%
+  height 100%
+  display flex
+  flex-direction column
+
+  &__header {
+    border 1px solid #e6e9ed
+    padding 8px
+  }
+
+  &__container {
+    flex 1
+    display flex
+  }
+
+  &__sidebar {
+    width 150px
+    background-color #fafafa
+    border-right 1px solid #e6e9ed
+    display flex
+    justify-content center
+  }
+
+  &__panel {
+    width (100 / 6)%
+    background-color #fafafa
+    border-left 1px solid #e6e9ed
+  }
+
+  &__main {
+    flex 1
+  }
+}
