@@ -1,10 +1,10 @@
 <template>
   <detail-panel>
-    <template v-slot="{ status }">
-      <node-panel :status="status">
+    <template slot-scope="scope">
+      <node-panel :status="scope.status">
         <detail-form type="node"/>
       </node-panel>
-      <canvas-panel :status="status">
+      <canvas-panel :status="scope.status">
         <!-- todo -->
       </canvas-panel>
     </template>
