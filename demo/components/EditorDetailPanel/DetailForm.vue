@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import { omit } from 'lodash'
+
 export default {
   name: 'DetailForm',
 
@@ -36,7 +38,8 @@ export default {
         const item = getSelected()[0]
         if (!item) return
         executeCommand(() => {
-          update(item, { ...formModel })
+          // this is for duplicate node in mind chart
+          update(item, { ...omit(formModel, 'children') })
         })
       }, 0)
     }
