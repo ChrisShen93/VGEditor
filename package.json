@@ -1,9 +1,22 @@
 {
   "name": "vg-editor",
   "version": "0.0.1",
+  "keywords": [
+    "vue",
+    "graphics",
+    "editor",
+    "tree",
+    "mind"
+  ],
   "description": "A visual graph editor based on G6 and Vue, inspired by GGEditor",
   "main": "cjs/index.js",
   "module": "es/index.js",
+  "files": [
+    "es",
+    "cjs",
+    "dist",
+    "*.md"
+  ],
   "scripts": {
     "dev": "node build/server.js",
     "watch": "webpack --config ./build/webpack.config.dev.js --watch",
@@ -12,10 +25,15 @@
     "build:cjs": "rimraf ./cjs && babel ./src -d ./cjs --plugins @babel/plugin-transform-modules-commonjs",
     "build:umd": "rimraf ./dist && webpack --config ./build/webpack.config.prod.js --progress"
   },
-  "repository": "git@github.com:ChrisShen93/VGEditor.git",
-  "author": "ChrisShen93 <chrisshen93@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ChrisShen93/VGEditor.git"
+  },
+  "author": {
+    "name": "ChrisShen93",
+    "email": "chrisshen93@gmail.com"
+  },
   "license": "MIT",
-  "private": true,
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
