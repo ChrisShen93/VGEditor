@@ -1,0 +1,49 @@
+{
+  "name": "vg-editor",
+  "version": "0.0.1",
+  "description": "A visual graph editor based on G6 and Vue, inspired by GGEditor",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "dev": "node build/server.js",
+    "watch": "webpack --config ./build/webpack.config.dev.js --watch",
+    "bundle": "node build/bundle.js",
+    "build:es": "rimraf ./es && babel ./src -d ./es",
+    "build:cjs": "rimraf ./cjs && babel ./src -d ./cjs --plugins @babel/plugin-transform-modules-commonjs",
+    "build:umd": "rimraf ./dist && webpack --config ./build/webpack.config.prod.js --progress"
+  },
+  "repository": "git@github.com:ChrisShen93/VGEditor.git",
+  "author": "ChrisShen93 <chrisshen93@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "@vue/babel-preset-app": "^3.11.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "dagre": "^0.8.4",
+    "eslint": "^6.3.0",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-vue-libs": "^4.0.0",
+    "express": "^4.17.1",
+    "rimraf": "^3.0.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "vue": "~2.4.4",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "~2.4.4",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-middleware": "^3.7.1",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@antv/g6": "^2.2.6",
+    "gg-editor-core": "1.3.4",
+    "lodash": "^4.17.15"
+  }
+}
