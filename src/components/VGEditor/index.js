@@ -1,4 +1,3 @@
-<script>
 import Editor from '@components/Base/Editor'
 import {
   EDITOR_EVENTS,
@@ -74,4 +73,3 @@ export default {
     )
   }
 }
-</script>

@@ -85,6 +85,17 @@ export default {
 
   inject: ['root'],
 
+  watch: {
+    data: {
+      deep: true,
+      handler (value) {
+        this.$nextTick(() => {
+          this.page.read(value)
+        })
+      }
+    }
+  },
+
   data () {
     return {
       config: {},
