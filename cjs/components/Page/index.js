@@ -84,6 +84,18 @@ var _default = {
     }
   },
   inject: ['root'],
+  watch: {
+    data: {
+      deep: true,
+      handler: function handler(value) {
+        var _this3 = this;
+
+        this.$nextTick(function () {
+          _this3.page.read(value);
+        });
+      }
+    }
+  },
   data: function data() {
     return {
       config: {},
