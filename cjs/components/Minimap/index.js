@@ -1,6 +1,6 @@
 "use strict";
 
-var _interopRequireDefault = require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault");
+var _interopRequireDefault = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireDefault");
 
 require("core-js/modules/es6.object.define-property");
 
@@ -13,7 +13,7 @@ require("core-js/modules/es6.number.constructor");
 
 var _g = _interopRequireDefault(require("@antv/g6"));
 
-var _constants = require("@common/constants");
+var _constants = require("../../common/constants");
 
 require('@antv/g6/build/plugin.tool.minimap');
 

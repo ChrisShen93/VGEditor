@@ -11,9 +11,9 @@ require("core-js/modules/web.dom.iterable");
 
 require("core-js/modules/es6.array.for-each");
 
-var _utils = require("@utils");
+var _utils = require("../../utils");
 
-var _constants = require("@common/constants");
+var _constants = require("../../common/constants");
 
 var _default = {
   mounted: function mounted() {
@@ -84,6 +84,18 @@ var _default = {
     }
   },
   inject: ['root'],
+  watch: {
+    data: {
+      deep: true,
+      handler: function handler(value) {
+        var _this3 = this;
+
+        this.$nextTick(function () {
+          _this3.page.read(value);
+        });
+      }
+    }
+  },
   data: function data() {
     return {
       config: {},

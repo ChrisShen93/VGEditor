@@ -7,9 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _constants = require("@common/constants");
+var _constants = require("../../common/constants");
 
-var _utils = require("@utils");
+var _utils = require("../../utils");
 
 var _default = {
   name: 'DetailPanel',

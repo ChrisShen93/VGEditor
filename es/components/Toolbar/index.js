@@ -1,5 +1,5 @@
-import Editor from '@components/Base/Editor';
-import { TOOLBAR_CONTAINER } from '@common/constants';
+import Editor from "../Base/Editor";
+import { TOOLBAR_CONTAINER } from "../../common/constants";
 export default {
   name: 'Toolbar',
   created: function created() {

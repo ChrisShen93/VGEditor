@@ -1,7 +1,7 @@
 import "core-js/modules/web.dom.iterable";
 import "core-js/modules/es6.array.for-each";
-import { merge } from '@utils';
-import { GRAPH_MOUSE_EVENTS, GRAPH_OTHER_EVENTS, PAGE_EVENTS, GRAPH_MOUSE_REACT_EVENTS, GRAPH_OTHER_REACT_EVENTS, PAGE_REACT_EVENTS } from '@common/constants';
+import { merge } from "../../utils";
+import { GRAPH_MOUSE_EVENTS, GRAPH_OTHER_EVENTS, PAGE_EVENTS, GRAPH_MOUSE_REACT_EVENTS, GRAPH_OTHER_REACT_EVENTS, PAGE_REACT_EVENTS } from "../../common/constants";
 export default {
   mounted: function mounted() {
     this.init().then(this.bindEvent);
@@ -68,6 +68,18 @@ export default {
     }
   },
   inject: ['root'],
+  watch: {
+    data: {
+      deep: true,
+      handler: function handler(value) {
+        var _this3 = this;
+
+        this.$nextTick(function () {
+          _this3.page.read(value);
+        });
+      }
+    }
+  },
   data: function data() {
     return {
       config: {},
