@@ -1,5 +1,5 @@
-import { STATUS_CANVAS_SELECTED } from '@common/constants';
-import { uniqueId } from '@utils';
+import { STATUS_CANVAS_SELECTED } from "../../common/constants";
+import { uniqueId } from "../../utils";
 export default {
   name: 'DetailPanel',
   created: function created() {

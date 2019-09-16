@@ -1,6 +1,6 @@
 "use strict";
 
-var _interopRequireDefault = require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault");
+var _interopRequireDefault = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireDefault");
 
 require("core-js/modules/es6.object.define-property");
 
@@ -9,17 +9,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck"));
+var _classCallCheck2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/classCallCheck"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn"));
+var _possibleConstructorReturn2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/possibleConstructorReturn"));
 
-var _getPrototypeOf2 = _interopRequireDefault(require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/inherits"));
+var _inherits2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/inherits"));
 
 var _ggEditorCore = _interopRequireDefault(require("gg-editor-core"));
 
-var _utils = require("@utils");
+var _utils = require("../../utils");
 
 var Editor =
 /*#__PURE__*/

@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard");
+var _interopRequireWildcard = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireWildcard");
 
-var _interopRequireDefault = require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault");
+var _interopRequireDefault = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireDefault");
 
 require("core-js/modules/es6.object.define-property");
 
@@ -167,27 +167,27 @@ Object.defineProperty(exports, "RegisterBehaviour", {
 });
 exports.default = void 0;
 
-var _VGEditor = _interopRequireDefault(require("@components/VGEditor"));
+var _VGEditor = _interopRequireDefault(require("./components/VGEditor"));
 
-var _Flow = _interopRequireDefault(require("@components/Flow"));
+var _Flow = _interopRequireDefault(require("./components/Flow"));
 
-var _Koni = _interopRequireDefault(require("@components/Koni"));
+var _Koni = _interopRequireDefault(require("./components/Koni"));
 
-var _Mind = _interopRequireDefault(require("@components/Mind"));
+var _Mind = _interopRequireDefault(require("./components/Mind"));
 
-var _Command = _interopRequireDefault(require("@components/Command"));
+var _Command = _interopRequireDefault(require("./components/Command"));
 
-var _ItemPanel = _interopRequireWildcard(require("@components/ItemPanel"));
+var _ItemPanel = _interopRequireWildcard(require("./components/ItemPanel"));
 
-var _DetailPanel = _interopRequireWildcard(require("@components/DetailPanel"));
+var _DetailPanel = _interopRequireWildcard(require("./components/DetailPanel"));
 
-var _Minimap = _interopRequireDefault(require("@components/Minimap"));
+var _Minimap = _interopRequireDefault(require("./components/Minimap"));
 
-var _ContextMenu = _interopRequireWildcard(require("@components/ContextMenu"));
+var _ContextMenu = _interopRequireWildcard(require("./components/ContextMenu"));
 
-var _Toolbar = _interopRequireDefault(require("@components/Toolbar"));
+var _Toolbar = _interopRequireDefault(require("./components/Toolbar"));
 
-var _Register = require("@components/Register");
+var _Register = require("./components/Register");
 
 var _default = _VGEditor.default;
 exports.default = _default;

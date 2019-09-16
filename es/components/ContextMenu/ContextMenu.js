@@ -1,5 +1,5 @@
-import Editor from '@components/Base/Editor';
-import { CONTEXT_MENU_CONTAINER } from '@common/constants';
+import Editor from "../Base/Editor";
+import { CONTEXT_MENU_CONTAINER } from "../../common/constants";
 export default {
   name: 'ContextMenu',
   mounted: function mounted() {
@@ -37,6 +37,6 @@ export default {
       "attrs": {
         "id": this.containerId
       }
-    }, [this.$scopedSlots.default ? this.$scopedSlots.default() : null]);
+    }, [this.$slots.default ? this.$slots.default : null]);
   }
 };

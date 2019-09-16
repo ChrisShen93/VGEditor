@@ -12,6 +12,6 @@ export default {
       "attrs": {
         "data-status": "".concat(type, "-selected")
       }
-    }, [this.$scopedSlots.default ? this.$scopedSlots.default() : null]);
+    }, [this.$slots.default ? this.$slots.default : null]);
   }
 };

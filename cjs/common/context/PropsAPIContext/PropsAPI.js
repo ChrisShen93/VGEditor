@@ -1,6 +1,6 @@
 "use strict";
 
-var _interopRequireDefault = require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault");
+var _interopRequireDefault = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireDefault");
 
 require("core-js/modules/es6.object.define-property");
 
@@ -13,11 +13,11 @@ require("core-js/modules/web.dom.iterable");
 
 require("core-js/modules/es6.array.for-each");
 
-var _classCallCheck2 = _interopRequireDefault(require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck"));
+var _classCallCheck2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/classCallCheck"));
 
-var _createClass2 = _interopRequireDefault(require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/createClass"));
+var _createClass2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/createClass"));
 
-var _defineProperty2 = _interopRequireDefault(require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty"));
+var _defineProperty2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/defineProperty"));
 
 var PropsAPI =
 /*#__PURE__*/

@@ -1,7 +1,7 @@
 import "core-js/modules/web.dom.iterable";
 import "core-js/modules/es6.array.for-each";
-import Editor from '@components/Base/Editor';
-import { MIND_CONTAINER, MIND_CLASS_NAME, EVENT_BEFORE_ADD_PAGE, EVENT_AFTER_ADD_PAGE, GRAPH_MOUSE_EVENTS, GRAPH_OTHER_EVENTS, PAGE_EVENTS, GRAPH_MOUSE_REACT_EVENTS, GRAPH_OTHER_REACT_EVENTS, PAGE_REACT_EVENTS } from '@common/constants';
+import Editor from "../Base/Editor";
+import { MIND_CONTAINER, MIND_CLASS_NAME, EVENT_BEFORE_ADD_PAGE, EVENT_AFTER_ADD_PAGE, GRAPH_MOUSE_EVENTS, GRAPH_OTHER_EVENTS, PAGE_EVENTS, GRAPH_MOUSE_REACT_EVENTS, GRAPH_OTHER_REACT_EVENTS, PAGE_REACT_EVENTS } from "../../common/constants";
 import Page from "../Page";
 export default {
   mixins: [Page],

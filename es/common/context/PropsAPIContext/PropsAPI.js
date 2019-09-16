@@ -1,8 +1,8 @@
 import "core-js/modules/web.dom.iterable";
 import "core-js/modules/es6.array.for-each";
-import _classCallCheck from "/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck";
-import _createClass from "/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/createClass";
-import _defineProperty from "/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty";
+import _classCallCheck from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/classCallCheck";
+import _createClass from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/createClass";
+import _defineProperty from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/defineProperty";
 
 var PropsAPI =
 /*#__PURE__*/

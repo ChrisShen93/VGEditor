@@ -1,5 +1,5 @@
-import Editor from '@components/Base/Editor';
-import { FLOW_CONTAINER, FLOW_CLASS_NAME, EVENT_BEFORE_ADD_PAGE, EVENT_AFTER_ADD_PAGE } from '@common/constants';
+import Editor from "../Base/Editor";
+import { FLOW_CONTAINER, FLOW_CLASS_NAME, EVENT_BEFORE_ADD_PAGE, EVENT_AFTER_ADD_PAGE } from "../../common/constants";
 import Page from "../Page";
 export default {
   mixins: [Page],
