@@ -636,7 +636,7 @@
   dependencies:
     regenerator-transform "^0.14.0"
 
-"@babel/plugin-transform-runtime@^7.4.0":
+"@babel/plugin-transform-runtime@^7.4.0", "@babel/plugin-transform-runtime@^7.6.0":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.6.0.tgz#85a3cce402b28586138e368fce20ab3019b9713e"
   integrity sha512-Da8tMf7uClzwUm/pnJ1S93m/aRXmoYNDD7TkHua8xBDdaAs54uZpTWvEt6NGwmoVMb9mZbntfTqmG2oSzN/7Vg==
@@ -1259,7 +1259,7 @@ babel-plugin-dynamic-import-node@^2.2.0, babel-plugin-dynamic-import-node@^2.3.0
   dependencies:
     object.assign "^4.1.0"
 
-babel-plugin-module-resolver@3.2.0:
+babel-plugin-module-resolver@3.2.0, babel-plugin-module-resolver@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-3.2.0.tgz#ddfa5e301e3b9aa12d852a9979f18b37881ff5a7"
   integrity sha512-tjR0GvSndzPew/Iayf4uICWZqjBwnlMWjSx6brryfQ81F9rxBVqwDJtFCV8oOs0+vJeefK9TmdZtkIFdFe1UnA==
