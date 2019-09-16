@@ -42,13 +42,17 @@ export default {
 
     init () {
       this.editor = new Editor()
-      this.propsAPI = new PropsAPI(this.editor)
+      this.propsAPI = new PropsAPI(this.editor, this.emitEvent)
     },
 
     bindEvent () {
       EDITOR_EVENTS.forEach(event => {
         this.addListener(this.editor, [event], this[EDITOR_REACT_EVENTS[event]])
       })
+    },
+
+    emitEvent (key, value) {
+      this.$emit(key, value)
     }
   },
 

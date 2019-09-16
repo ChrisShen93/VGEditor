@@ -1,7 +1,7 @@
 export default class PropsAPI {
   editor = null
 
-  constructor (editor) {
+  constructor (editor, emitEventFn) {
     this.editor = editor;
 
     ['executeCommand'].forEach(key => {
@@ -9,7 +9,11 @@ export default class PropsAPI {
     });
 
     ['read', 'save', 'add', 'find', 'update', 'remove', 'getSelected'].forEach(key => {
-      this[key] = (...params) => this.currentPage[key](...params)
+      this[key] = (...params) => {
+        const ret = this.currentPage[key](...params)
+        emitEventFn(key, ret)
+        return ret
+      }
     })
   }
 
