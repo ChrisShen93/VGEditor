@@ -11,9 +11,9 @@ require("core-js/modules/web.dom.iterable");
 
 require("core-js/modules/es6.array.for-each");
 
-var _utils = require("@utils");
+var _utils = require("../../utils");
 
-var _constants = require("@common/constants");
+var _constants = require("../../common/constants");
 
 var _default = {
   mounted: function mounted() {
@@ -102,7 +102,7 @@ var _default = {
       "style": {
         height: '100%'
       }
-    }, [page ? this.$scopedSlots.default ? this.$scopedSlots.default() : null : null]);
+    }, [page ? this.$slots.default ? this.$slots.default : null : null]);
   }
 };
 exports.default = _default;

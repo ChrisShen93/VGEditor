@@ -1,6 +1,6 @@
 "use strict";
 
-var _interopRequireDefault = require("/Users/chris/Workspace/VGEditor/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault");
+var _interopRequireDefault = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireDefault");
 
 require("core-js/modules/es6.object.define-property");
 
@@ -42,7 +42,7 @@ var _default = {
   inject: ['root'],
   render: function render() {
     var h = arguments[0];
-    return h("div", [this.$scopedSlots.default ? this.$scopedSlots.default() : null]);
+    return h("div", [this.$slots.default ? this.$slots.default : null]);
   }
 };
 exports.default = _default;

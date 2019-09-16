@@ -3,7 +3,7 @@ import G6 from '@antv/g6';
 
 require('@antv/g6/build/plugin.tool.minimap');
 
-import { MINIMAP_CONTAINER } from '@common/constants';
+import { MINIMAP_CONTAINER } from "../../common/constants";
 export default {
   name: 'Minimap',
   created: function created() {

@@ -25,6 +25,6 @@ export default {
   inject: ['root'],
   render: function render() {
     var h = arguments[0];
-    return h("div", [this.$scopedSlots.default ? this.$scopedSlots.default() : null]);
+    return h("div", [this.$slots.default ? this.$slots.default : null]);
   }
 };

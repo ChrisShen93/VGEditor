@@ -13,6 +13,6 @@ export default {
         "data-command": name
       },
       "class": 'command'
-    }, [this.$scopedSlots.default ? this.$scopedSlots.default() : null]);
+    }, [this.$slots.default ? this.$slots.default : null]);
   }
 };

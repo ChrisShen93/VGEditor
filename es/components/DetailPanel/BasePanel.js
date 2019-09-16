@@ -14,6 +14,6 @@ export default {
       return null;
     }
 
-    return h("div", [this.$scopedSlots.default ? this.$scopedSlots.default() : null]);
+    return h("div", [this.$slots.default ? this.$slots.default : null]);
   }
 };
