@@ -1,11 +1,17 @@
 "use strict";
 
+var _interopRequireDefault = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireDefault");
+
 require("core-js/modules/es6.object.define-property");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+
+require("core-js/modules/es6.array.map");
+
+var _toConsumableArray2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/toConsumableArray"));
 
 require("core-js/modules/web.dom.iterable");
 
@@ -62,28 +68,39 @@ var _default = {
       var _this2 = this;
 
       var addListener = this.addListener;
-      var props = this.$props || {};
+      var graph = this.getGraph();
 
       _constants.GRAPH_MOUSE_EVENTS.forEach(function (event) {
         var eventName = _constants.GRAPH_MOUSE_REACT_EVENTS[event];
-        addListener(_this2.graph, "".concat(event), props["on".concat(eventName)]);
-        addListener(_this2.graph, "node:".concat(event), props["onNode".concat(eventName)]);
-        addListener(_this2.graph, "edge:".concat(event), props["onEdge".concat(eventName)]);
-        addListener(_this2.graph, "group:".concat(event), props["onGroup".concat(eventName)]);
-        addListener(_this2.graph, "guide:".concat(event), props["onGuide".concat(eventName)]);
-        addListener(_this2.graph, "anchor:".concat(event), props["onAnchor".concat(eventName)]);
+        addListener(graph, "".concat(event), _this2["on".concat(eventName)]);
+        addListener(graph, "node:".concat(event), _this2["onNode".concat(eventName)]);
+        addListener(graph, "edge:".concat(event), _this2["onEdge".concat(eventName)]);
+        addListener(graph, "group:".concat(event), _this2["onGroup".concat(eventName)]);
+        addListener(graph, "guide:".concat(event), _this2["onGuide".concat(eventName)]);
+        addListener(graph, "anchor:".concat(event), _this2["onAnchor".concat(eventName)]);
       });
 
       _constants.GRAPH_OTHER_EVENTS.forEach(function (event) {
-        addListener(_this2.graph, [event], props[_constants.GRAPH_OTHER_REACT_EVENTS[event]]);
+        addListener(graph, event, _this2[_constants.GRAPH_OTHER_REACT_EVENTS[event]]);
       });
 
       _constants.PAGE_EVENTS.forEach(function (event) {
-        addListener(_this2.page, [event], props[_constants.PAGE_REACT_EVENTS[event]]);
+        addListener(_this2.page, event, _this2[_constants.PAGE_REACT_EVENTS[event]]);
       });
+    },
+    getGraph: function getGraph() {
+      return this.page.getGraph();
     }
   },
   inject: ['root'],
+  props: [].concat((0, _toConsumableArray2.default)(_constants.GRAPH_MOUSE_EVENTS.map(function (event) {
+    var evN = _constants.GRAPH_MOUSE_REACT_EVENTS[event];
+    return ["on".concat(evN), "onNode".concat(evN), "onEdge".concat(evN), "onGroup".concat(evN), "onGuide".concat(evN), "onAnchor".concat(evN)];
+  }).flat()), (0, _toConsumableArray2.default)(_constants.GRAPH_OTHER_EVENTS.map(function (event) {
+    return _constants.GRAPH_OTHER_REACT_EVENTS[event];
+  })), (0, _toConsumableArray2.default)(_constants.PAGE_EVENTS.map(function (event) {
+    return _constants.PAGE_REACT_EVENTS[event];
+  }))),
   watch: {
     data: {
       deep: true,

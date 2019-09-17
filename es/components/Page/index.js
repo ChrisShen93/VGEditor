@@ -1,3 +1,5 @@
+import "core-js/modules/es6.array.map";
+import _toConsumableArray from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/toConsumableArray";
 import "core-js/modules/web.dom.iterable";
 import "core-js/modules/es6.array.for-each";
 import { merge } from "../../utils";
@@ -49,25 +51,36 @@ export default {
       var _this2 = this;
 
       var addListener = this.addListener;
-      var props = this.$props || {};
+      var graph = this.getGraph();
       GRAPH_MOUSE_EVENTS.forEach(function (event) {
         var eventName = GRAPH_MOUSE_REACT_EVENTS[event];
-        addListener(_this2.graph, "".concat(event), props["on".concat(eventName)]);
-        addListener(_this2.graph, "node:".concat(event), props["onNode".concat(eventName)]);
-        addListener(_this2.graph, "edge:".concat(event), props["onEdge".concat(eventName)]);
-        addListener(_this2.graph, "group:".concat(event), props["onGroup".concat(eventName)]);
-        addListener(_this2.graph, "guide:".concat(event), props["onGuide".concat(eventName)]);
-        addListener(_this2.graph, "anchor:".concat(event), props["onAnchor".concat(eventName)]);
+        addListener(graph, "".concat(event), _this2["on".concat(eventName)]);
+        addListener(graph, "node:".concat(event), _this2["onNode".concat(eventName)]);
+        addListener(graph, "edge:".concat(event), _this2["onEdge".concat(eventName)]);
+        addListener(graph, "group:".concat(event), _this2["onGroup".concat(eventName)]);
+        addListener(graph, "guide:".concat(event), _this2["onGuide".concat(eventName)]);
+        addListener(graph, "anchor:".concat(event), _this2["onAnchor".concat(eventName)]);
       });
       GRAPH_OTHER_EVENTS.forEach(function (event) {
-        addListener(_this2.graph, [event], props[GRAPH_OTHER_REACT_EVENTS[event]]);
+        addListener(graph, event, _this2[GRAPH_OTHER_REACT_EVENTS[event]]);
       });
       PAGE_EVENTS.forEach(function (event) {
-        addListener(_this2.page, [event], props[PAGE_REACT_EVENTS[event]]);
+        addListener(_this2.page, event, _this2[PAGE_REACT_EVENTS[event]]);
       });
+    },
+    getGraph: function getGraph() {
+      return this.page.getGraph();
     }
   },
   inject: ['root'],
+  props: [].concat(_toConsumableArray(GRAPH_MOUSE_EVENTS.map(function (event) {
+    var evN = GRAPH_MOUSE_REACT_EVENTS[event];
+    return ["on".concat(evN), "onNode".concat(evN), "onEdge".concat(evN), "onGroup".concat(evN), "onGuide".concat(evN), "onAnchor".concat(evN)];
+  }).flat()), _toConsumableArray(GRAPH_OTHER_EVENTS.map(function (event) {
+    return GRAPH_OTHER_REACT_EVENTS[event];
+  })), _toConsumableArray(PAGE_EVENTS.map(function (event) {
+    return PAGE_REACT_EVENTS[event];
+  }))),
   watch: {
     data: {
       deep: true,

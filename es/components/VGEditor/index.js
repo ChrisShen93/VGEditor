@@ -1,3 +1,5 @@
+import "core-js/modules/es6.array.map";
+import _toConsumableArray from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/toConsumableArray";
 import "core-js/modules/web.dom.iterable";
 import "core-js/modules/es6.array.for-each";
 import Editor from "../Base/Editor";
@@ -34,7 +36,7 @@ export default {
     },
     init: function init() {
       this.editor = new Editor();
-      this.propsAPI = new PropsAPI(this.editor);
+      this.propsAPI = new PropsAPI(this.editor, this.emitEvent);
     },
     bindEvent: function bindEvent() {
       var _this = this;
@@ -44,6 +46,9 @@ export default {
       });
     }
   },
+  props: _toConsumableArray(EDITOR_EVENTS.map(function (event) {
+    return EDITOR_REACT_EVENTS[event];
+  })),
   data: function data() {
     return {
       editor: null,
