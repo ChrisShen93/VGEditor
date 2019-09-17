@@ -2,24 +2,6 @@
 
 A visual graph editor based on G6 and Vue, inspired by [GGEditor](https://github.com/alibaba/GGEditor)
 
-## Todo list
-
-> Feature:
-
-- [x] Flow
-- [x] Koni
-- [x] Mind
-- [x] Toolbar
-- [x] ShapePanel
-- [x] DetailPanel
-- [x] Mini map
-- [x] RegisterNode
-- [x] RegisterEdge
-- [x] RegisterCommand
-- [x] RegisterBehaviour
-- [x] RegisterGuide
-- [ ] API doc
-
 ## Installation
 
 ### yarn and npm
@@ -30,16 +12,19 @@ yarn add vg-editor@PLUGIN_VERSION
 npm install vg-editor@PLUGIN_VERSION -S
 ```
 
-|Vue version|Plugin version|Docs|
+|Vue version|Plugin version|
 |---|---|---|
-|2.4.x|2.4.3|[doc](https://github.com/ChrisShen93/VGEditor/tree/vue-2.4.x)|
-|2.5.x|2.5.2|[doc](https://github.com/ChrisShen93/VGEditor/tree/vue-2.5.x)|
-|2.6.x|2.6.2|[doc](https://github.com/ChrisShen93/VGEditor/tree/vue-2.6.x)|
+|2.4.x|2.4.3|
+|2.5.x|2.5.2|
+|2.6.x|2.6.2|
 
 ### run demo
 
 ```shell
-npm run dev
+git clone https://github.com/ChrisShen93/VGEditor.git
+cd VGEditor
+yarn
+yarn dev
 ```
 
 ## Usage

@@ -1,113 +1,35 @@
-# VGEditor
+# VGEditor Documentation
 
-A visual graph editor based on G6 and Vue, inspired by [GGEditor](https://github.com/alibaba/GGEditor)
+## API
 
-## Installation
+- [VGEDitor](./api/vgEditor.md)
 
-### yarn and npm
+### Components
 
-```shell
-yarn add vg-editor@PLUGIN_VERSION
-# or
-npm install vg-editor@PLUGIN_VERSION -S
-```
+- [Flow](./api/notFinished.md)
+- [Koni](./api/notFinished.md)
+- [Mind](./api/notFinished.md)
+- [Command](./api/notFinished.md)
+- [Minimap](./api/notFinished.md)
+- [ContextMenu](./api/notFinished.md)
+- [Toolbar](./api/notFinished.md)
+- [ItemPanel](./api/notFinished.md)
+- [DetailPanel](./api/notFinished.md)
 
-|Vue version|Plugin version|
-|---|---|---|
-|2.4.x|2.4.3|
-|2.5.x|2.5.2|
-|2.6.x|2.6.2|
+### Registerations
 
-### run demo
+- [RegisterNode](./api/notFinished.md)
+- [RegisterEdge](./api/notFinished.md)
+- [RegisterGroup](./api/notFinished.md)
+- [RegisterGuide](./api/notFinished.md)
+- [RegisterCommand](./api/notFinished.md)
+- [RegisterBehaviour](./api/notFinished.md)
 
-```shell
-git clone https://github.com/ChrisShen93/VGEditor.git
-cd VGEditor
-yarn
-yarn dev
-```
+### Events
 
-## Usage
+- [PageEvents](./api/notFinished.md)
+- [EditorEvents](./api/editorEvents.md)
 
-### Flow
+### Methods
 
-```html
-<template>
-  <v-g-editor>
-    <flow :data="data"/>
-  </v-g-editor>
-</template>
-
-<script>
-import VGEditor, { Flow } from 'vg-editor'
-const data = {
-  nodes: [{
-    type: 'node',
-    size: '70*70',
-    shape: 'flow-circle',
-    color: '#FA8C16',
-    label: '起止节点',
-    x: 55,
-    y: 55,
-    id: 'ea1184e8',
-    index: 0,
-  }, {
-    type: 'node',
-    size: '70*70',
-    shape: 'flow-circle',
-    color: '#FA8C16',
-    label: '结束节点',
-    x: 55,
-    y: 255,
-    id: '481fbb1a',
-    index: 2,
-  }],
-  edges: [{
-    source: 'ea1184e8',
-    sourceAnchor: 2,
-    target: '481fbb1a',
-    targetAnchor: 0,
-    id: '7989ac70',
-    index: 1,
-  }],
-};
-export default {
-  data () {
-    return { data }
-  },
-  components: { VGEditor, Flow }
-}
-</script>
-```
-
-### Mind
-
-```html
-<template>
-  <v-g-editor>
-    <mind :data="data">
-  </v-g-editor>
-</template>
-
-<script>
-import VGEditor, { Mind } from 'vg-editor'
-const data = {
-  roots: [{
-    label: '中心主题',
-    children: [{
-      label: '分支主题 1',
-    }, {
-      label: '分支主题 2',
-    }, {
-      label: '分支主题 3',
-    }],
-  }],
-};
-export default {
-  data () {
-    return { data }
-  },
-  components: { VGEditor, Mind }
-}
-</script>
-```
+- [PropsAPI](./api/notFinished.md)
