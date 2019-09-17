@@ -9,6 +9,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+require("core-js/modules/es6.array.map");
+
+var _toConsumableArray2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/toConsumableArray"));
+
 require("core-js/modules/web.dom.iterable");
 
 require("core-js/modules/es6.array.for-each");
@@ -60,6 +64,9 @@ var _default = {
       });
     }
   },
+  props: (0, _toConsumableArray2.default)(_constants.EDITOR_EVENTS.map(function (event) {
+    return _constants.EDITOR_REACT_EVENTS[event];
+  })),
   data: function data() {
     return {
       editor: null,
