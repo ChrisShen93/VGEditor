@@ -49,12 +49,10 @@ export default {
       EDITOR_EVENTS.forEach(event => {
         this.addListener(this.editor, [event], this[EDITOR_REACT_EVENTS[event]])
       })
-    },
-
-    emitEvent (key, value) {
-      this.$emit(key, value)
     }
   },
+
+  props: [...EDITOR_EVENTS.map(event => EDITOR_REACT_EVENTS[event])],
 
   data () {
     return {
