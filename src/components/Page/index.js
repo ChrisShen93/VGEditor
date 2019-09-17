@@ -60,30 +60,44 @@ export default {
 
     bindEvent () {
       const { addListener } = this
-      const props = this.$props || {}
+
+      const graph = this.getGraph()
 
       GRAPH_MOUSE_EVENTS.forEach((event) => {
         const eventName = GRAPH_MOUSE_REACT_EVENTS[event]
 
-        addListener(this.graph, `${event}`, props[`on${eventName}`])
-        addListener(this.graph, `node:${event}`, props[`onNode${eventName}`])
-        addListener(this.graph, `edge:${event}`, props[`onEdge${eventName}`])
-        addListener(this.graph, `group:${event}`, props[`onGroup${eventName}`])
-        addListener(this.graph, `guide:${event}`, props[`onGuide${eventName}`])
-        addListener(this.graph, `anchor:${event}`, props[`onAnchor${eventName}`])
+        addListener(graph, `${event}`, this[`on${eventName}`])
+        addListener(graph, `node:${event}`, this[`onNode${eventName}`])
+        addListener(graph, `edge:${event}`, this[`onEdge${eventName}`])
+        addListener(graph, `group:${event}`, this[`onGroup${eventName}`])
+        addListener(graph, `guide:${event}`, this[`onGuide${eventName}`])
+        addListener(graph, `anchor:${event}`, this[`onAnchor${eventName}`])
       })
 
       GRAPH_OTHER_EVENTS.forEach((event) => {
-        addListener(this.graph, [event], props[GRAPH_OTHER_REACT_EVENTS[event]])
+        addListener(this.graph, [event], this[GRAPH_OTHER_REACT_EVENTS[event]])
       })
 
       PAGE_EVENTS.forEach((event) => {
-        addListener(this.page, [event], props[PAGE_REACT_EVENTS[event]])
+        addListener(this.page, [event], this[PAGE_REACT_EVENTS[event]])
       })
+    },
+
+    getGraph () {
+      return this.page.getGraph()
     }
   },
 
   inject: ['root'],
+
+  props: [
+    ...GRAPH_MOUSE_EVENTS.map(event => {
+      const evN = GRAPH_MOUSE_REACT_EVENTS[event]
+      return [`on${evN}`, `onNode${evN}`, `onEdge${evN}`, `onGroup${evN}`, `onGuide${evN}`, `onAnchor${evN}`]
+    }).flat(),
+    ...GRAPH_OTHER_EVENTS.map(event => GRAPH_OTHER_REACT_EVENTS[event]),
+    ...PAGE_EVENTS.map(event => PAGE_REACT_EVENTS[event])
+  ],
 
   watch: {
     data: {

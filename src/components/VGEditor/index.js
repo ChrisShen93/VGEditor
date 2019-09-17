@@ -52,6 +52,8 @@ export default {
     }
   },
 
+  props: [...EDITOR_EVENTS.map(event => EDITOR_REACT_EVENTS[event])],
+
   data () {
     return {
       editor: null,
