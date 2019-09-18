@@ -14,9 +14,9 @@ npm install vg-editor@PLUGIN_VERSION -S
 
 |Vue version|Plugin version|
 |---|---|---|
-|2.4.x|2.4.3|
-|2.5.x|2.5.2|
-|2.6.x|2.6.2|
+|2.4.x|2.4.4|
+|2.5.x|2.5.3|
+|2.6.x|2.6.3|
 
 ### run demo
 
