@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireWildcard");
+var _interopRequireWildcard = require("@babel/runtime-corejs2/helpers/interopRequireWildcard");
 
-var _interopRequireDefault = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireDefault");
+var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
 
 require("core-js/modules/es6.object.define-property");
 
