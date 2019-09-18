@@ -1,7 +1,7 @@
-import _classCallCheck from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/classCallCheck";
-import _possibleConstructorReturn from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/getPrototypeOf";
-import _inherits from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/inherits";
+import _classCallCheck from "@babel/runtime-corejs2/helpers/esm/classCallCheck";
+import _possibleConstructorReturn from "@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn";
+import _getPrototypeOf from "@babel/runtime-corejs2/helpers/esm/getPrototypeOf";
+import _inherits from "@babel/runtime-corejs2/helpers/esm/inherits";
 import GGEditorCore from 'gg-editor-core';
 import { uniqueId } from "../../utils";
 
