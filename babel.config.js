@@ -1,13 +1,18 @@
 module.exports = {
   presets: [
-    '@vue/app'
+    [
+      '@vue/app',
+      {
+        absoluteRuntime: false
+      }
+    ]
   ],
   plugins: [
     '@babel/plugin-transform-runtime',
     [
       'module-resolver',
       {
-        'alias': {
+        alias: {
           '@components': './src/components',
           '@common': './src/common',
           '@utils': './src/utils'
