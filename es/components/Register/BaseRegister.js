@@ -1,4 +1,4 @@
-import _toConsumableArray from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/toConsumableArray";
+import _toConsumableArray from "@babel/runtime-corejs2/helpers/esm/toConsumableArray";
 import "core-js/modules/es6.array.map";
 import Editor from "../Base/Editor";
 import { upperFirst } from "../../utils";

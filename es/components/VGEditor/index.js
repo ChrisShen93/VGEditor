@@ -1,5 +1,5 @@
 import "core-js/modules/es6.array.map";
-import _toConsumableArray from "E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/toConsumableArray";
+import _toConsumableArray from "@babel/runtime-corejs2/helpers/esm/toConsumableArray";
 import "core-js/modules/web.dom.iterable";
 import "core-js/modules/es6.array.for-each";
 import Editor from "../Base/Editor";

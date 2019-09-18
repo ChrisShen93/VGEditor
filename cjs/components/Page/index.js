@@ -1,6 +1,6 @@
 "use strict";
 
-var _interopRequireDefault = require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/interopRequireDefault");
+var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
 
 require("core-js/modules/es6.object.define-property");
 
@@ -11,7 +11,7 @@ exports.default = void 0;
 
 require("core-js/modules/es6.array.map");
 
-var _toConsumableArray2 = _interopRequireDefault(require("E:\\workspace\\VGEditor\\node_modules\\@babel\\runtime-corejs2/helpers/esm/toConsumableArray"));
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/esm/toConsumableArray"));
 
 require("core-js/modules/web.dom.iterable");
 
