@@ -8,10 +8,10 @@ export default {
   mounted: function mounted() {
     this.init().then(this.bindEvent);
   },
-  beforeDestroy: function beforeDestroy() {
-    this.page && this.page.destroy();
-    this.page = null;
-  },
+  // beforeDestroy () {
+  //   this.page && this.page.destroy()
+  //   this.page = null
+  // },
   methods: {
     getPageId: function getPageId() {// should be extend
     },
