@@ -13,10 +13,10 @@ export default {
     this.init().then(this.bindEvent)
   },
 
-  beforeDestroy () {
-    this.page && this.page.destroy()
-    this.page = null
-  },
+  // beforeDestroy () {
+  //   this.page && this.page.destroy()
+  //   this.page = null
+  // },
 
   methods: {
     getPageId () {
