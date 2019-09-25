@@ -3,7 +3,7 @@ const express = require('express')
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
 const webpackHotMiddleware = require('webpack-hot-middleware')
-const webpackConfig = require('./webpack.config.demo')
+const webpackConfig = require('./webpack.config.demo.dev')
 
 const app = express()
 const compiler = webpack(webpackConfig)
@@ -18,7 +18,7 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler))
 
-app.use(express.static(path.resolve(__dirname, '../demo')))
+app.use(express.static(path.resolve(__dirname, '..')))
 
 const port = process.env.PORT || 8080
 module.exports = app.listen(port, () => {
