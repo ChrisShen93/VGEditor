@@ -69,6 +69,8 @@ export default {
           roots: []
         };
       }
-    }
+    },
+    graph: Object,
+    shortcut: Object
   }
 };
