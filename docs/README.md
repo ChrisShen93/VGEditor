@@ -6,9 +6,9 @@
 
 ### Components
 
-- [Flow](./api/notFinished.md)
-- [Koni](./api/notFinished.md)
-- [Mind](./api/notFinished.md)
+- [Flow](./api/flow.md)
+- [Koni](./api/koni.md)
+- [Mind](./api/mind.md)
 - [Command](./api/notFinished.md)
 - [Minimap](./api/notFinished.md)
 - [ContextMenu](./api/notFinished.md)
@@ -27,7 +27,7 @@
 
 ### Events
 
-- [PageEvents](./api/notFinished.md)
+- [PageEvents](./api/pageEvents.md)
 - [EditorEvents](./api/editorEvents.md)
 
 ### Methods

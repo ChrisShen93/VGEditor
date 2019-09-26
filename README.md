@@ -2,6 +2,12 @@
 
 A visual graph editor based on G6 and Vue, inspired by [GGEditor](https://github.com/alibaba/GGEditor)
 
+### Online demo
+
+1. [flow](https://chrisshen93.github.io/VGEditor/demo/build/#/flow)
+2. [koni](https://chrisshen93.github.io/VGEditor/demo/build/#/koni)
+3. [mind](https://chrisshen93.github.io/VGEditor/demo/build/#/mind)
+
 ## Installation
 
 ### yarn and npm
@@ -18,7 +24,7 @@ npm install vg-editor@PLUGIN_VERSION -S
 |2.5.x|2.5.5|
 |2.6.x|2.6.5|
 
-### run demo
+### Run demo
 
 ```shell
 git clone https://github.com/ChrisShen93/VGEditor.git
@@ -111,3 +117,7 @@ export default {
 }
 </script>
 ```
+
+### Documentation
+
+[API](https://chrisshen93.github.io/VGEditor/docs/)
