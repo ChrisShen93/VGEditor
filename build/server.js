@@ -1,4 +1,3 @@
-const path = require('path')
 const express = require('express')
 const webpack = require('webpack')
 const webpackDevMiddleware = require('webpack-dev-middleware')
@@ -9,7 +8,6 @@ const app = express()
 const compiler = webpack(webpackConfig)
 
 app.use(webpackDevMiddleware(compiler, {
-  publicPath: '/__build__/',
   stats: {
     colors: true,
     chunks: false
@@ -17,8 +15,6 @@ app.use(webpackDevMiddleware(compiler, {
 }))
 
 app.use(webpackHotMiddleware(compiler))
-
-app.use(express.static(path.resolve(__dirname, '..')))
 
 const port = process.env.PORT || 8080
 module.exports = app.listen(port, () => {

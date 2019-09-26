@@ -5,8 +5,30 @@ body {
   margin 0
   height 100%
 }
-.demo {
+ul {
+  margin 0
+}
+.demo-container {
   height 100%
+  display flex
+  flex-direction column
+}
+.demo-nav {
+  display flex
+  list-style none
+
+  a {
+    display block
+    padding .5em 1rem
+    color #007bff
+    text-decoration none
+    background-color transparent
+  }
+}
+
+.demo {
+  // height 100%
+  flex 1
 }
 .demo-chart {
   position relative
