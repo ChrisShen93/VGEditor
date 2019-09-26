@@ -13,7 +13,7 @@ module.exports = merge(webpackBaseConfig, {
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(demoPath, 'build'),
-    publicPath: '/build/'
+    publicPath: '/VGEditor/demo/build/'
   },
   plugins: [
     new HtmlWebpackPlugin({
