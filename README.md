@@ -32,9 +32,9 @@ npm install vg-editor@PLUGIN_VERSION -S
 
 |Vue version|Plugin version|
 |---|---|
-|2.4.x|2.4.6|
-|2.5.x|2.5.4|
-|2.6.x|2.6.4|
+|2.4.x|2.4.8|
+|2.5.x|2.5.5|
+|2.6.x|2.6.5|
 
 ### run demo
 
