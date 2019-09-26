@@ -46,7 +46,6 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
     "css-loader": "^3.2.0",
-    "dagre": "^0.8.4",
     "eslint": "^6.3.0",
     "eslint-loader": "^3.0.0",
     "eslint-plugin-vue-libs": "^4.0.0",

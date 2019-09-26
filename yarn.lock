@@ -2206,7 +2206,7 @@ d3@^5.4.0:
     d3-voronoi "1"
     d3-zoom "1"
 
-dagre@^0.8.4, dagre@~0.8.2:
+dagre@~0.8.2:
   version "0.8.4"
   resolved "https://registry.yarnpkg.com/dagre/-/dagre-0.8.4.tgz#26b9fb8f7bdc60c6110a0458c375261836786061"
   integrity sha512-Dj0csFDrWYKdavwROb9FccHfTC4fJbyF/oJdL9LNZJ8WUvl968P6PAKEriGqfbdArVJEmmfA+UyumgWEwcHU6A==
