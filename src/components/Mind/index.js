@@ -81,6 +81,8 @@ export default {
   },
 
   props: {
-    data: { default: () => ({ roots: [] }) }
+    data: { default: () => ({ roots: [] }) },
+    graph: Object,
+    shortcut: Object
   }
 }
