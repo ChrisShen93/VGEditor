@@ -28,6 +28,14 @@ export default {
           edges: []
         };
       }
+    },
+    graph: Object,
+    align: Object,
+    grid: Object,
+    shortcut: Object,
+    noEndEdge: {
+      default: true,
+      type: Boolean
     }
   }
 };

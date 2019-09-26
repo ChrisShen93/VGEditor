@@ -25,20 +25,14 @@ var _default = {
   mounted: function mounted() {
     this.init().then(this.bindEvent);
   },
-  // beforeDestroy () {
-  //   this.page && this.page.destroy()
-  //   this.page = null
-  // },
   methods: {
     getPageId: function getPageId() {// should be extend
     },
     initPage: function initPage() {// should be extend
     },
     readData: function readData() {
-      var data = this.config.data;
-
-      if (data) {
-        this.page.read(data);
+      if (this.data) {
+        this.page.read(this.data);
       }
     },
     addListener: function addListener(target, eventName, handler) {
@@ -101,18 +95,6 @@ var _default = {
   })), (0, _toConsumableArray2.default)(_constants.PAGE_EVENTS.map(function (event) {
     return _constants.PAGE_REACT_EVENTS[event];
   }))),
-  watch: {
-    data: {
-      deep: true,
-      handler: function handler(value) {
-        var _this3 = this;
-
-        this.$nextTick(function () {
-          _this3.page.read(value);
-        });
-      }
-    }
-  },
   data: function data() {
     return {
       config: {},
