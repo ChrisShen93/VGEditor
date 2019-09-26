@@ -13,11 +13,6 @@ export default {
     this.init().then(this.bindEvent)
   },
 
-  // beforeDestroy () {
-  //   this.page && this.page.destroy()
-  //   this.page = null
-  // },
-
   methods: {
     getPageId () {
       // should be extend
@@ -28,10 +23,8 @@ export default {
     },
 
     readData () {
-      const { data } = this.config
-
-      if (data) {
-        this.page.read(data)
+      if (this.data) {
+        this.page.read(this.data)
       }
     },
 
@@ -98,17 +91,6 @@ export default {
     ...GRAPH_OTHER_EVENTS.map(event => GRAPH_OTHER_REACT_EVENTS[event]),
     ...PAGE_EVENTS.map(event => PAGE_REACT_EVENTS[event])
   ],
-
-  watch: {
-    data: {
-      deep: true,
-      handler (value) {
-        this.$nextTick(() => {
-          this.page.read(value)
-        })
-      }
-    }
-  },
 
   data () {
     return {
