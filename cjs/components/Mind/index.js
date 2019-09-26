@@ -89,7 +89,9 @@ var _default2 = {
           roots: []
         };
       }
-    }
+    },
+    graph: Object,
+    shortcut: Object
   }
 };
 exports.default = _default2;
