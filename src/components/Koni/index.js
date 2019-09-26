@@ -31,6 +31,11 @@ export default {
   },
 
   props: {
-    data: { default: () => ({ nodes: [], edges: [] }) }
+    data: { default: () => ({ nodes: [], edges: [] }) },
+    graph: Object,
+    align: Object,
+    grid: Object,
+    shortcut: Object,
+    noEndEdge: { default: true, type: Boolean }
   }
 }
