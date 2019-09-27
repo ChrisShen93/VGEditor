@@ -46,4 +46,4 @@ export default {
 
 ## Events
 
-请移步至 [PageEvents](./pageEvents.zh-CN.md) 查看详情
+请移步至 [PageEvents](./pageEvents.md) 查看详情

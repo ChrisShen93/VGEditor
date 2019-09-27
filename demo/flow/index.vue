@@ -1,5 +1,6 @@
 <template>
   <v-g-editor class="demo" ref="flowChart">
+    <button @click="save">save</button>
     <div class="demo-chart">
       <div class="demo-chart__header">
         <flow-toolbar/>
@@ -34,8 +35,8 @@ export default {
 
   methods: {
     save () {
-      const page = this.$refs.flowChart.editor.getCurrentPage()
-      console.log(page, page.save())
+      console.log(this.$refs.flowChart.editor.getCurrentPage().save())
+      console.log(this.$refs.flowChart.propsAPI.save())
     }
   },
 

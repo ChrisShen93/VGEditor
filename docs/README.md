@@ -9,21 +9,21 @@
 - [Flow](./api/flow.md)
 - [Koni](./api/koni.md)
 - [Mind](./api/mind.md)
-- [Command](./api/notFinished.md)
-- [Minimap](./api/notFinished.md)
-- [ContextMenu](./api/notFinished.md)
-- [Toolbar](./api/notFinished.md)
-- [ItemPanel](./api/notFinished.md)
-- [DetailPanel](./api/notFinished.md)
+- [Command](./api/command.md)
+- [Minimap](./api/minimap.md)
+- [ContextMenu](./api/contextMenu.md)
+- [Toolbar](./api/toolbar.md)
+- [ItemPanel](./api/itemPanel.md)
+- [DetailPanel](./api/detailPanel.md)
 
 ### Registerations
 
-- [RegisterNode](./api/notFinished.md)
-- [RegisterEdge](./api/notFinished.md)
-- [RegisterGroup](./api/notFinished.md)
-- [RegisterGuide](./api/notFinished.md)
-- [RegisterCommand](./api/notFinished.md)
-- [RegisterBehaviour](./api/notFinished.md)
+- [RegisterNode](./api/registerNode.md)
+- [RegisterEdge](./api/registerEdge.md)
+- [RegisterGroup](./api/registerGroup.md)
+- [RegisterGuide](./api/registerGuide.md)
+- [RegisterCommand](./api/registerCommand.md)
+- [RegisterBehaviour](./api/registerBehaviour.md)
 
 ### Events
 
