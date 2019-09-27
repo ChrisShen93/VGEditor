@@ -1,5 +1,5 @@
 <template>
-  <v-g-editor class="demo">
+  <v-g-editor class="demo" ref="flowChart">
     <div class="demo-chart">
       <div class="demo-chart__header">
         <flow-toolbar/>
