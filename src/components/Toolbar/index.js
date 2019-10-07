@@ -45,7 +45,7 @@ export default {
     const { containerId } = this
     return (
       <div id={containerId}>
-        {this.$scopedSlots.default ? this.$scopedSlots.default() : null}
+        {this.$scopedSlots.default ? this.$scopedSlots.default() : this.$slots.default}
       </div>
     )
   }

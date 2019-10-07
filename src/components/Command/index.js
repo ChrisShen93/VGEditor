@@ -10,7 +10,7 @@ export default {
     const { name } = this
     return (
       <div data-command={name} class='command'>
-        {this.$scopedSlots.default ? this.$scopedSlots.default() : null}
+        {this.$scopedSlots.default ? this.$scopedSlots.default() : this.$slots.default}
       </div>
     )
   }

@@ -50,7 +50,7 @@ export default {
           ? <img src={src} alt={shape} draggable={false}/>
           : this.$scopedSlots.default
             ? this.$scopedSlots.default()
-            : null}
+            : this.$slots.default}
       </div>
     )
   }

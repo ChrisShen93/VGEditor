@@ -38,7 +38,7 @@ export default {
 
     return (
       <div key={uniqueId}>
-        {this.$scopedSlots.default ? this.$scopedSlots.default({ status, uniqueId }) : null}
+        {this.$scopedSlots.default ? this.$scopedSlots.default({ status, uniqueId }) : this.$slots.default}
       </div>
     )
   }

@@ -41,7 +41,7 @@ export default {
   render () {
     return (
       <div id={this.containerId}>
-        {this.$scopedSlots.default ? this.$scopedSlots.default() : null}
+        {this.$scopedSlots.default ? this.$scopedSlots.default() : this.$slots.default}
       </div>
     )
   }

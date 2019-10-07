@@ -107,7 +107,7 @@ export default {
         {page
           ? this.$scopedSlots.default
             ? this.$scopedSlots.default()
-            : null
+            : this.$slots.default
           : null}
       </div>
     )
