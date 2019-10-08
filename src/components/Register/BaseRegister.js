@@ -19,7 +19,7 @@ export default {
           keys = ['name', 'behaviour', 'dependences']
         }
 
-        const args = keys.map(key => this.$attrs[key])
+        const args = keys.map(key => this[key])
 
         host[`register${upperFirst(type)}`](...args)
       })
@@ -27,6 +27,14 @@ export default {
   },
 
   inject: ['root'],
+
+  props: {
+    name: String,
+    config: Object,
+    extend: String,
+    behaviour: Function,
+    dependences: Array
+  },
 
   render () {
     return null

@@ -9,6 +9,7 @@
         <select v-model="formModel.shape" @change.prevent="handleSubmit">
           <option value="flow-smooth">Smooth</option>
           <option value="flow-polyline">Polyline</option>
+          <option value="custom-polyline">Custom Polyline</option>
           <option value="flow-polyline-round">Polyline Round</option>
         </select>
       </div>

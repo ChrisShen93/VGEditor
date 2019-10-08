@@ -19,11 +19,12 @@
       </div>
     </div>
     <flow-context-menu/>
+    <register-edge name="custom-polyline" extend="flow-polyline" :config="customEdgeConfig"/>
   </v-g-editor>
 </template>
 
 <script>
-import VGEditor, { Flow } from 'vg-editor'
+import VGEditor, { Flow, RegisterEdge } from 'vg-editor'
 import { FlowToolbar } from '../components/EditorToolbar'
 import { FlowItemPanel } from '../components/EditorItemPanel'
 import { FlowDetailPanel } from '../components/EditorDetailPanel'
@@ -42,7 +43,28 @@ export default {
 
   data () {
     return {
-      flowChartData: { nodes: [], edges: [] }
+      flowChartData: { nodes: [], edges: [] },
+      customEdgeConfig: {
+        // afterDraw (item) {
+        //   const keyShape = item.getKeyShape()
+        //   keyShape.attr('lineDash', [10, 10])
+        //   keyShape.attr('lineDashOffset', 0)
+        //   keyShape.animate({
+        //     lineDashOffset: -20,
+        //     repeat: true
+        //   }, 500)
+        // },
+        getActivedStyle (item) {
+          return {
+            lineWidth: 3
+          }
+        },
+        getSelectedStyle (item) {
+          return {
+            lineWidth: 3
+          }
+        }
+      }
     }
   },
 
@@ -53,7 +75,8 @@ export default {
     FlowItemPanel,
     FlowDetailPanel,
     EditorMinimap,
-    FlowContextMenu
+    FlowContextMenu,
+    RegisterEdge
   }
 }
 </script>
