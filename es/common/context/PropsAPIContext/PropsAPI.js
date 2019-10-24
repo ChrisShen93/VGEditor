@@ -1,8 +1,4 @@
-import "core-js/modules/web.dom.iterable";
-import "core-js/modules/es6.array.for-each";
-import _classCallCheck from "@babel/runtime-corejs2/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime-corejs2/helpers/esm/createClass";
-import _defineProperty from "@babel/runtime-corejs2/helpers/esm/defineProperty";
+import _createClass from "@babel/runtime/helpers/createClass";
 
 var PropsAPI =
 /*#__PURE__*/
@@ -10,10 +6,7 @@ function () {
   function PropsAPI(editor) {
     var _this = this;
 
-    _classCallCheck(this, PropsAPI);
-
-    _defineProperty(this, "editor", null);
-
+    this.editor = null;
     this.editor = editor;
     ['executeCommand'].forEach(function (key) {
       _this[key] = function () {

@@ -10,7 +10,7 @@ export default {
     var type = this.type,
         status = this.status;
 
-    if ("".concat(type, "-selected") !== status) {
+    if (type + "-selected" !== status) {
       return null;
     }
 

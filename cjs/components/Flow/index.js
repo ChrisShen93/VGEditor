@@ -1,8 +1,6 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
-
-require("core-js/modules/es6.object.define-property");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -31,7 +29,7 @@ var _default2 = {
       });
     },
     getPageId: function getPageId() {
-      return "".concat(_constants.FLOW_CONTAINER, "_").concat(this.root.editor.id);
+      return _constants.FLOW_CONTAINER + "_" + this.root.editor.id;
     }
   },
   props: {

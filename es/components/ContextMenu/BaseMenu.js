@@ -10,7 +10,7 @@ export default {
     return h("div", {
       "class": 'menu',
       "attrs": {
-        "data-status": "".concat(type, "-selected")
+        "data-status": type + "-selected"
       }
     }, [this.$scopedSlots.default ? this.$scopedSlots.default() : this.$slots.default]);
   }

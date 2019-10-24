@@ -1,6 +1,5 @@
 <template>
   <v-g-editor class="demo" ref="flowChart">
-    <button @click="save">save</button>
     <div class="demo-chart">
       <div class="demo-chart__header">
         <flow-toolbar/>
@@ -10,7 +9,7 @@
           <flow-item-panel/>
         </div>
         <div class="demo-chart__main">
-          <flow :data="flowChartData"/>
+          <flow :data="flowChartData" :onNodeClick="handleNodeClick" :graph="{ mode: 'readOnly' }"/>
         </div>
         <div class="demo-chart__panel">
           <flow-detail-panel/>
@@ -30,30 +29,21 @@ import { FlowItemPanel } from '../components/EditorItemPanel'
 import { FlowDetailPanel } from '../components/EditorDetailPanel'
 import EditorMinimap from '../components/EditorMinimap'
 import { FlowContextMenu } from '../components/EditorContextMenu'
+import data from './data'
 
 export default {
   name: 'FlowDemo',
 
   methods: {
-    save () {
-      console.log(this.$refs.flowChart.editor.getCurrentPage().save())
-      console.log(this.$refs.flowChart.propsAPI.save())
+    handleNodeClick (e) {
+      console.log(e)
     }
   },
 
   data () {
     return {
-      flowChartData: { nodes: [], edges: [] },
+      flowChartData: data,
       customEdgeConfig: {
-        // afterDraw (item) {
-        //   const keyShape = item.getKeyShape()
-        //   keyShape.attr('lineDash', [10, 10])
-        //   keyShape.attr('lineDashOffset', 0)
-        //   keyShape.animate({
-        //     lineDashOffset: -20,
-        //     repeat: true
-        //   }, 500)
-        // },
         getActivedStyle (item) {
           return {
             lineWidth: 3

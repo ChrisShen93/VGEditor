@@ -13,10 +13,12 @@ A visual graph editor based on G6 and Vue, inspired by [GGEditor](https://github
 ### yarn and npm
 
 ```shell
-yarn add vg-editor@2.7.0
+yarn add vg-editor@2.7.1
 # or
-npm install vg-editor@2.7.0 -S
+npm install vg-editor@2.7.1 -S
 ```
+
+> If you're using vue-cli v4, you must use vg-editor@2.7.1
 
 ### Run demo
 

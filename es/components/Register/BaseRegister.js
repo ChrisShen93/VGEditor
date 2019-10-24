@@ -1,5 +1,3 @@
-import _toConsumableArray from "@babel/runtime-corejs2/helpers/esm/toConsumableArray";
-import "core-js/modules/es6.array.map";
 import Editor from "../Base/Editor";
 import { upperFirst } from "../../utils";
 export default {
@@ -28,7 +26,7 @@ export default {
           return _this[key];
         });
 
-        (_host = host)["register".concat(upperFirst(type))].apply(_host, _toConsumableArray(args));
+        (_host = host)["register" + upperFirst(type)].apply(_host, args);
       });
     }
   },

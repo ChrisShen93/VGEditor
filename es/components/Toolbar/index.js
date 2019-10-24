@@ -25,7 +25,7 @@ export default {
   methods: {
     getContainerId: function getContainerId() {
       var editor = this.root.editor;
-      this.containerId = "".concat(TOOLBAR_CONTAINER, "_").concat(editor.id);
+      this.containerId = TOOLBAR_CONTAINER + "_" + editor.id;
     }
   },
   inject: ['root'],

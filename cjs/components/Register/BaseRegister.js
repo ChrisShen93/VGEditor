@@ -1,17 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
-
-require("core-js/modules/es6.object.define-property");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/esm/toConsumableArray"));
-
-require("core-js/modules/es6.array.map");
 
 var _Editor = _interopRequireDefault(require("../Base/Editor"));
 
@@ -43,7 +37,7 @@ var _default = {
           return _this[key];
         });
 
-        (_host = host)["register".concat((0, _utils.upperFirst)(type))].apply(_host, (0, _toConsumableArray2.default)(args));
+        (_host = host)["register" + (0, _utils.upperFirst)(type)].apply(_host, args);
       });
     }
   },

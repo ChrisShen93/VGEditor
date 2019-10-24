@@ -1,7 +1,3 @@
-import "core-js/modules/es6.array.map";
-import _toConsumableArray from "@babel/runtime-corejs2/helpers/esm/toConsumableArray";
-import "core-js/modules/web.dom.iterable";
-import "core-js/modules/es6.array.for-each";
 import { merge } from "../../utils";
 import { GRAPH_MOUSE_EVENTS, GRAPH_OTHER_EVENTS, PAGE_EVENTS, GRAPH_MOUSE_REACT_EVENTS, GRAPH_OTHER_REACT_EVENTS, PAGE_REACT_EVENTS } from "../../common/constants";
 export default {
@@ -48,12 +44,12 @@ export default {
       var graph = this.getGraph();
       GRAPH_MOUSE_EVENTS.forEach(function (event) {
         var eventName = GRAPH_MOUSE_REACT_EVENTS[event];
-        addListener(graph, "".concat(event), _this2["on".concat(eventName)]);
-        addListener(graph, "node:".concat(event), _this2["onNode".concat(eventName)]);
-        addListener(graph, "edge:".concat(event), _this2["onEdge".concat(eventName)]);
-        addListener(graph, "group:".concat(event), _this2["onGroup".concat(eventName)]);
-        addListener(graph, "guide:".concat(event), _this2["onGuide".concat(eventName)]);
-        addListener(graph, "anchor:".concat(event), _this2["onAnchor".concat(eventName)]);
+        addListener(graph, "" + event, _this2["on" + eventName]);
+        addListener(graph, "node:" + event, _this2["onNode" + eventName]);
+        addListener(graph, "edge:" + event, _this2["onEdge" + eventName]);
+        addListener(graph, "group:" + event, _this2["onGroup" + eventName]);
+        addListener(graph, "guide:" + event, _this2["onGuide" + eventName]);
+        addListener(graph, "anchor:" + event, _this2["onAnchor" + eventName]);
       });
       GRAPH_OTHER_EVENTS.forEach(function (event) {
         addListener(_this2.graph, [event], _this2[GRAPH_OTHER_REACT_EVENTS[event]]);
@@ -67,14 +63,14 @@ export default {
     }
   },
   inject: ['root'],
-  props: [].concat(_toConsumableArray(GRAPH_MOUSE_EVENTS.map(function (event) {
+  props: [].concat(GRAPH_MOUSE_EVENTS.map(function (event) {
     var evN = GRAPH_MOUSE_REACT_EVENTS[event];
-    return ["on".concat(evN), "onNode".concat(evN), "onEdge".concat(evN), "onGroup".concat(evN), "onGuide".concat(evN), "onAnchor".concat(evN)];
-  }).flat()), _toConsumableArray(GRAPH_OTHER_EVENTS.map(function (event) {
+    return ["on" + evN, "onNode" + evN, "onEdge" + evN, "onGroup" + evN, "onGuide" + evN, "onAnchor" + evN];
+  }).flat(), GRAPH_OTHER_EVENTS.map(function (event) {
     return GRAPH_OTHER_REACT_EVENTS[event];
-  })), _toConsumableArray(PAGE_EVENTS.map(function (event) {
+  }), PAGE_EVENTS.map(function (event) {
     return PAGE_REACT_EVENTS[event];
-  }))),
+  })),
   data: function data() {
     return {
       config: {},

@@ -1,17 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
-
-require("core-js/modules/es6.object.define-property");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-require("core-js/modules/web.dom.iterable");
-
-require("core-js/modules/es6.array.for-each");
 
 var _Editor = _interopRequireDefault(require("../Base/Editor"));
 
@@ -43,12 +37,12 @@ var _default2 = {
 
       _constants.GRAPH_MOUSE_EVENTS.forEach(function (event) {
         var eventName = _constants.GRAPH_MOUSE_REACT_EVENTS[event];
-        addListener(_this.graph, "".concat(event), props["on".concat(eventName)]);
-        addListener(_this.graph, "node:".concat(event), props["onNode".concat(eventName)]);
-        addListener(_this.graph, "edge:".concat(event), props["onEdge".concat(eventName)]);
-        addListener(_this.graph, "group:".concat(event), props["onGroup".concat(eventName)]);
-        addListener(_this.graph, "guide:".concat(event), props["onGuide".concat(eventName)]);
-        addListener(_this.graph, "anchor:".concat(event), props["onAnchor".concat(eventName)]);
+        addListener(_this.graph, "" + event, props["on" + eventName]);
+        addListener(_this.graph, "node:" + event, props["onNode" + eventName]);
+        addListener(_this.graph, "edge:" + event, props["onEdge" + eventName]);
+        addListener(_this.graph, "group:" + event, props["onGroup" + eventName]);
+        addListener(_this.graph, "guide:" + event, props["onGuide" + eventName]);
+        addListener(_this.graph, "anchor:" + event, props["onAnchor" + eventName]);
       });
 
       _constants.GRAPH_OTHER_EVENTS.forEach(function (event) {
@@ -79,7 +73,7 @@ var _default2 = {
       });
     },
     getPageId: function getPageId() {
-      return "".concat(_constants.MIND_CONTAINER, "_").concat(this.root.editor.id);
+      return _constants.MIND_CONTAINER + "_" + this.root.editor.id;
     }
   },
   props: {

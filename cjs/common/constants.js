@@ -1,16 +1,9 @@
 "use strict";
 
-require("core-js/modules/es6.object.define-property");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.EDITOR_EVENTS = exports.PAGE_EVENTS = exports.GRAPH_OTHER_EVENTS = exports.GRAPH_MOUSE_EVENTS = exports.EDITOR_REACT_EVENTS = exports.PAGE_REACT_EVENTS = exports.GRAPH_OTHER_REACT_EVENTS = exports.GRAPH_MOUSE_REACT_EVENTS = exports.STATUS_MULTI_SELECTED = exports.STATUS_GROUP_SELECTED = exports.STATUS_EDGE_SELECTED = exports.STATUS_NODE_SELECTED = exports.STATUS_CANVAS_SELECTED = exports.EVENT_AFTER_ADD_PAGE = exports.EVENT_BEFORE_ADD_PAGE = exports.KONI_CLASS_NAME = exports.MIND_CLASS_NAME = exports.FLOW_CLASS_NAME = exports.CONTEXT_MENU_CONTAINER = exports.MINIMAP_CONTAINER = exports.TOOLBAR_CONTAINER = exports.KONI_CONTAINER = exports.MIND_CONTAINER = exports.FLOW_CONTAINER = void 0;
-
-require("core-js/modules/web.dom.iterable");
-
-require("core-js/modules/es6.object.keys");
-
 var FLOW_CONTAINER = 'J_FlowContainer';
 exports.FLOW_CONTAINER = FLOW_CONTAINER;
 var MIND_CONTAINER = 'J_MindContainer';

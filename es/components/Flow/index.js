@@ -17,7 +17,7 @@ export default {
       });
     },
     getPageId: function getPageId() {
-      return "".concat(FLOW_CONTAINER, "_").concat(this.root.editor.id);
+      return FLOW_CONTAINER + "_" + this.root.editor.id;
     }
   },
   props: {
