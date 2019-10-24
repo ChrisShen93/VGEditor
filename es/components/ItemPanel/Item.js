@@ -1,16 +1,4 @@
-import "core-js/modules/es6.object.define-property";
-import "core-js/modules/es6.object.define-properties";
-import "core-js/modules/es7.object.get-own-property-descriptors";
-import "core-js/modules/es6.array.for-each";
-import "core-js/modules/es6.array.filter";
-import "core-js/modules/web.dom.iterable";
-import "core-js/modules/es6.object.keys";
-import _defineProperty from "@babel/runtime-corejs2/helpers/esm/defineProperty";
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
+import _extends from "@babel/runtime/helpers/extends";
 export default {
   name: 'Item',
   created: function created() {
@@ -32,7 +20,7 @@ export default {
           model = this.model;
 
       if (this.page) {
-        this.page.beginAdd(type, _objectSpread({
+        this.page.beginAdd(type, _extends({
           type: type,
           size: size,
           shape: shape

@@ -1,4 +1,3 @@
-import "core-js/modules/es6.function.name";
 export default {
   name: 'Command',
   props: {

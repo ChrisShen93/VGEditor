@@ -21,7 +21,7 @@ export default {
   methods: {
     getContainerId: function getContainerId() {
       var editor = this.root.editor;
-      this.containerId = "".concat(CONTEXT_MENU_CONTAINER, "_").concat(editor.id);
+      this.containerId = CONTEXT_MENU_CONTAINER + "_" + editor.id;
     }
   },
   inject: ['root'],

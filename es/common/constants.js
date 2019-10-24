@@ -1,5 +1,3 @@
-import "core-js/modules/web.dom.iterable";
-import "core-js/modules/es6.object.keys";
 export var FLOW_CONTAINER = 'J_FlowContainer';
 export var MIND_CONTAINER = 'J_MindContainer';
 export var KONI_CONTAINER = 'J_KoniContainer';

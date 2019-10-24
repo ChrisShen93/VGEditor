@@ -1,4 +1,3 @@
-import "core-js/modules/es6.number.constructor";
 import G6 from '@antv/g6';
 
 require('@antv/g6/build/plugin.tool.minimap');
@@ -23,7 +22,7 @@ export default {
       var _this = this;
 
       return new Promise(function (resolve) {
-        _this.containerId = "".concat(MINIMAP_CONTAINER, "_").concat(_this.root.editor.id);
+        _this.containerId = MINIMAP_CONTAINER + "_" + _this.root.editor.id;
         var container = _this.container || _this.containerId;
         var width = _this.width,
             height = _this.height,

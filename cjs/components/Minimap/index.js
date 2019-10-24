@@ -1,15 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
-
-require("core-js/modules/es6.object.define-property");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-require("core-js/modules/es6.number.constructor");
 
 var _g = _interopRequireDefault(require("@antv/g6"));
 
@@ -36,7 +32,7 @@ var _default = {
       var _this = this;
 
       return new Promise(function (resolve) {
-        _this.containerId = "".concat(_constants.MINIMAP_CONTAINER, "_").concat(_this.root.editor.id);
+        _this.containerId = _constants.MINIMAP_CONTAINER + "_" + _this.root.editor.id;
         var container = _this.container || _this.containerId;
         var width = _this.width,
             height = _this.height,

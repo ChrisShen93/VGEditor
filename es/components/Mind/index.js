@@ -1,5 +1,3 @@
-import "core-js/modules/web.dom.iterable";
-import "core-js/modules/es6.array.for-each";
 import Editor from "../Base/Editor";
 import { MIND_CONTAINER, MIND_CLASS_NAME, EVENT_BEFORE_ADD_PAGE, EVENT_AFTER_ADD_PAGE, GRAPH_MOUSE_EVENTS, GRAPH_OTHER_EVENTS, PAGE_EVENTS, GRAPH_MOUSE_REACT_EVENTS, GRAPH_OTHER_REACT_EVENTS, PAGE_REACT_EVENTS } from "../../common/constants";
 import Page from "../Page";
@@ -26,12 +24,12 @@ export default {
       var props = this.$props || {};
       GRAPH_MOUSE_EVENTS.forEach(function (event) {
         var eventName = GRAPH_MOUSE_REACT_EVENTS[event];
-        addListener(_this.graph, "".concat(event), props["on".concat(eventName)]);
-        addListener(_this.graph, "node:".concat(event), props["onNode".concat(eventName)]);
-        addListener(_this.graph, "edge:".concat(event), props["onEdge".concat(eventName)]);
-        addListener(_this.graph, "group:".concat(event), props["onGroup".concat(eventName)]);
-        addListener(_this.graph, "guide:".concat(event), props["onGuide".concat(eventName)]);
-        addListener(_this.graph, "anchor:".concat(event), props["onAnchor".concat(eventName)]);
+        addListener(_this.graph, "" + event, props["on" + eventName]);
+        addListener(_this.graph, "node:" + event, props["onNode" + eventName]);
+        addListener(_this.graph, "edge:" + event, props["onEdge" + eventName]);
+        addListener(_this.graph, "group:" + event, props["onGroup" + eventName]);
+        addListener(_this.graph, "guide:" + event, props["onGuide" + eventName]);
+        addListener(_this.graph, "anchor:" + event, props["onAnchor" + eventName]);
       });
       GRAPH_OTHER_EVENTS.forEach(function (event) {
         addListener(_this.graph, [event], props[GRAPH_OTHER_REACT_EVENTS[event]]);
@@ -59,7 +57,7 @@ export default {
       });
     },
     getPageId: function getPageId() {
-      return "".concat(MIND_CONTAINER, "_").concat(this.root.editor.id);
+      return MIND_CONTAINER + "_" + this.root.editor.id;
     }
   },
   props: {

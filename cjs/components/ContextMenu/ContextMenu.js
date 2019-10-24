@@ -1,8 +1,6 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime-corejs2/helpers/interopRequireDefault");
-
-require("core-js/modules/es6.object.define-property");
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -34,7 +32,7 @@ var _default = {
   methods: {
     getContainerId: function getContainerId() {
       var editor = this.root.editor;
-      this.containerId = "".concat(_constants.CONTEXT_MENU_CONTAINER, "_").concat(editor.id);
+      this.containerId = _constants.CONTEXT_MENU_CONTAINER + "_" + editor.id;
     }
   },
   inject: ['root'],

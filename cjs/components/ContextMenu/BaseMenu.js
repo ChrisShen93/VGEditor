@@ -1,7 +1,5 @@
 "use strict";
 
-require("core-js/modules/es6.object.define-property");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -18,7 +16,7 @@ var _default = {
     return h("div", {
       "class": 'menu',
       "attrs": {
-        "data-status": "".concat(type, "-selected")
+        "data-status": type + "-selected"
       }
     }, [this.$scopedSlots.default ? this.$scopedSlots.default() : this.$slots.default]);
   }
