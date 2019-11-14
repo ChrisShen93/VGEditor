@@ -3,13 +3,7 @@ import {
   MIND_CONTAINER,
   MIND_CLASS_NAME,
   EVENT_BEFORE_ADD_PAGE,
-  EVENT_AFTER_ADD_PAGE,
-  GRAPH_MOUSE_EVENTS,
-  GRAPH_OTHER_EVENTS,
-  PAGE_EVENTS,
-  GRAPH_MOUSE_REACT_EVENTS,
-  GRAPH_OTHER_REACT_EVENTS,
-  PAGE_REACT_EVENTS
+  EVENT_AFTER_ADD_PAGE
 } from '@common/constants'
 import Page from '../Page'
 
@@ -32,30 +26,7 @@ export default {
     },
 
     bindEvent () {
-      /* todo: find a way to extend from super       begin */
-      const { addListener } = this
-      const props = this.$props || {}
-
-      GRAPH_MOUSE_EVENTS.forEach((event) => {
-        const eventName = GRAPH_MOUSE_REACT_EVENTS[event]
-
-        addListener(this.graph, `${event}`, props[`on${eventName}`])
-        addListener(this.graph, `node:${event}`, props[`onNode${eventName}`])
-        addListener(this.graph, `edge:${event}`, props[`onEdge${eventName}`])
-        addListener(this.graph, `group:${event}`, props[`onGroup${eventName}`])
-        addListener(this.graph, `guide:${event}`, props[`onGuide${eventName}`])
-        addListener(this.graph, `anchor:${event}`, props[`onAnchor${eventName}`])
-      })
-
-      GRAPH_OTHER_EVENTS.forEach((event) => {
-        addListener(this.graph, [event], props[GRAPH_OTHER_REACT_EVENTS[event]])
-      })
-
-      PAGE_EVENTS.forEach((event) => {
-        addListener(this.page, [event], props[PAGE_REACT_EVENTS[event]])
-      })
-      /* todo: find a way to extend from super     end */
-
+      Page.methods.bindEvent.call(this)
       this.bindKeyUpEditLabel()
     },
 
