@@ -52,7 +52,7 @@ export default {
         addListener(graph, "anchor:" + event, _this2["onAnchor" + eventName]);
       });
       GRAPH_OTHER_EVENTS.forEach(function (event) {
-        addListener(_this2.graph, [event], _this2[GRAPH_OTHER_REACT_EVENTS[event]]);
+        addListener(graph, [event], _this2[GRAPH_OTHER_REACT_EVENTS[event]]);
       });
       PAGE_EVENTS.forEach(function (event) {
         addListener(_this2.page, [event], _this2[PAGE_REACT_EVENTS[event]]);

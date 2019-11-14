@@ -29,36 +29,12 @@ var _default2 = {
       });
     },
     bindEvent: function bindEvent() {
-      var _this = this;
-
-      /* todo: find a way to extend from super       begin */
-      var addListener = this.addListener;
-      var props = this.$props || {};
-
-      _constants.GRAPH_MOUSE_EVENTS.forEach(function (event) {
-        var eventName = _constants.GRAPH_MOUSE_REACT_EVENTS[event];
-        addListener(_this.graph, "" + event, props["on" + eventName]);
-        addListener(_this.graph, "node:" + event, props["onNode" + eventName]);
-        addListener(_this.graph, "edge:" + event, props["onEdge" + eventName]);
-        addListener(_this.graph, "group:" + event, props["onGroup" + eventName]);
-        addListener(_this.graph, "guide:" + event, props["onGuide" + eventName]);
-        addListener(_this.graph, "anchor:" + event, props["onAnchor" + eventName]);
-      });
-
-      _constants.GRAPH_OTHER_EVENTS.forEach(function (event) {
-        addListener(_this.graph, [event], props[_constants.GRAPH_OTHER_REACT_EVENTS[event]]);
-      });
-
-      _constants.PAGE_EVENTS.forEach(function (event) {
-        addListener(_this.page, [event], props[_constants.PAGE_REACT_EVENTS[event]]);
-      });
-      /* todo: find a way to extend from super     end */
-
+      _Page.default.methods.bindEvent.call(this);
 
       this.bindKeyUpEditLabel();
     },
     bindKeyUpEditLabel: function bindKeyUpEditLabel() {
-      var _this2 = this;
+      var _this = this;
 
       var editLabel = this.page.get('labelTextArea');
       editLabel.on('keyup', function (e) {
@@ -66,7 +42,7 @@ var _default2 = {
         var item = editLabel.focusItem;
         var text = editLabel.textContent;
 
-        _this2.page.emit('keyUpEditLabel', {
+        _this.page.emit('keyUpEditLabel', {
           item: item,
           text: text
         });

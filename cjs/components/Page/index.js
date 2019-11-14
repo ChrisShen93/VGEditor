@@ -63,7 +63,7 @@ var _default = {
       });
 
       _constants.GRAPH_OTHER_EVENTS.forEach(function (event) {
-        addListener(_this2.graph, [event], _this2[_constants.GRAPH_OTHER_REACT_EVENTS[event]]);
+        addListener(graph, [event], _this2[_constants.GRAPH_OTHER_REACT_EVENTS[event]]);
       });
 
       _constants.PAGE_EVENTS.forEach(function (event) {
