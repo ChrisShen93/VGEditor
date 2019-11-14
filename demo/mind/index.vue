@@ -6,7 +6,7 @@
       </div>
       <div class="demo-chart__container">
         <div class="demo-chart__main">
-          <mind :data="mockData"/>
+          <mind :data="mockData" :onNodeClick="handleNodeClick"/>
         </div>
         <div class="demo-chart__panel">
           <mind-detail-panel/>
@@ -28,6 +28,12 @@ import mockData from '../mockData/mind-data'
 
 export default {
   name: 'KoniDemo',
+
+  methods: {
+    handleNodeClick (e) {
+      console.log(e)
+    }
+  },
 
   data () {
     return {
