@@ -68,7 +68,7 @@ export default {
       })
 
       GRAPH_OTHER_EVENTS.forEach((event) => {
-        addListener(this.graph, [event], this[GRAPH_OTHER_REACT_EVENTS[event]])
+        addListener(graph, [event], this[GRAPH_OTHER_REACT_EVENTS[event]])
       })
 
       PAGE_EVENTS.forEach((event) => {
