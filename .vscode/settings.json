@@ -1,0 +1,8 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "prettier.useEditorConfig": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
+}

@@ -15,7 +15,5 @@
   },
   "homepage": "https://chrisshen93.github.io/VGEditor/",
   "license": "MIT",
-  "devDependencies": {
-    "typescript": "^3.6.4"
-  }
+  "devDependencies": {}
 }

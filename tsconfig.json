@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "allowJs": false,
+    "lib": [
+      "ESNext"
+    ],
+    "strict": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "declaration": true,
+  },
+  "exclude": [
+    "node_modules",
+    "coverage/**",
+    "**/*.spec.ts",
+    "jest.config.js"
+  ]
+}
