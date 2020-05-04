@@ -1,3 +1,3 @@
-export default function test() {
-  console.log('flow');
-}
+import Flow from './flow.vue';
+
+export default Flow;

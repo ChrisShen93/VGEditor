@@ -6,17 +6,15 @@ const getConfig = require('./webpack.config');
 runDev();
 
 async function runDev() {
-  const compiler = webpack(getConfig({ prod: false }));
-
-  const server = new DevServer(compiler);
-
   const port = await portfinder.getPortPromise({ port: 3000 });
-  console.log(port);
+  const config = getConfig({ prod: false, devServer: { port } });
+  const compiler = webpack(config);
 
   const devOptions = {
-    host: '0.0.0.0',
-    port,
+    ...config.devServer,
   };
+
+  const server = new DevServer(compiler, devOptions);
 
   server.listen(devOptions.port, devOptions.host, (err) => {
     if (err) {

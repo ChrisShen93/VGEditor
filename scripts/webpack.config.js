@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { VueLoaderPlugin } = require('vue-loader');
 const webpack = require('webpack');
+const WebpackBar = require('webpackbar');
 
 const outputPath = resolve(__dirname, '../playground_dist');
 
@@ -15,11 +16,16 @@ const getConfig = (env = {}) => {
     devtool: env.prod ? 'source-map' : 'inline-source-map',
 
     devServer: {
+      host: '0.0.0.0',
       contentBase: outputPath,
       historyApiFallback: true,
       hot: true,
-      stats: 'minimal',
+      stats: 'errors-only',
+      clientLogLevel: 'warning',
+      ...(env.devServer || {}),
     },
+
+    stats: 'errors-warnings',
 
     output: {
       path: outputPath,
@@ -64,6 +70,7 @@ const getConfig = (env = {}) => {
           NODE_ENV: JSON.stringify(process.env.NODE_ENV),
         },
       }),
+      new WebpackBar(),
       ...extraPlugins,
     ],
   };
