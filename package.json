@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --mode=development"
+    "dev": "webpack-dev-server --mode=development",
+    "build": "node ./scripts/build.js"
   },
   "peerDependencies": {
     "vue": "3.0.0-beta.6"
