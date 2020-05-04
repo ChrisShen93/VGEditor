@@ -4,10 +4,10 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { VueLoaderPlugin } = require('vue-loader');
 const webpack = require('webpack');
 
-const outputPath = resolve(__dirname, 'playground_dist');
+const outputPath = resolve(__dirname, '../playground_dist');
 
 /** @type {import('webpack').ConfigurationFactory} */
-const config = (env = {}) => {
+const getConfig = (env = {}) => {
   const extraPlugins = env.prod ? [new BundleAnalyzerPlugin()] : [];
 
   return {
@@ -27,7 +27,8 @@ const config = (env = {}) => {
       filename: 'bundle.js',
     },
 
-    entry: [resolve(__dirname, 'playground/main.ts')],
+    entry: [resolve(__dirname, '../playground/main.ts')],
+
     module: {
       rules: [
         {
@@ -54,7 +55,7 @@ const config = (env = {}) => {
     plugins: [
       new VueLoaderPlugin(),
       new HtmlWebpackPlugin({
-        template: resolve(__dirname, 'playground/index.html'),
+        template: resolve(__dirname, '../playground/index.html'),
       }),
       new webpack.DefinePlugin({
         __DEV__: JSON.stringify(!env.prod),
@@ -68,4 +69,4 @@ const config = (env = {}) => {
   };
 };
 
-module.exports = config;
+module.exports = getConfig;
