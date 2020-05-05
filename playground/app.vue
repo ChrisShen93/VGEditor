@@ -8,8 +8,8 @@
   </div>
 </template>
 
-<script>
-import { defineComponent, inject, computed, ref } from 'vue';
+<script lang="ts">
+import { defineComponent, inject, ref } from 'vue';
 
 export default defineComponent({
   name: 'App',
